@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="card mt-4">
+  	<h5 class="card-header">Add a new student</h5>
+	  <div class="card-body">
+	    <form>
+		  <div class="form-group">
+		    <label for="fn">Name</label>
+		    <input type="text" class="form-control" name="fullName" [(ngModel)]= "data.fullName" #data="ngModel" id="fn" placeholder="Student Name">
+		  </div>
+		  <div class="form-group">
+		    <label for="fa">Age</label>
+		    <input type="number" class="form-control" id="fa" name="age" [(ngModel)]= "data.age" #data="ngModel" placeholder="Student Age">
+		  </div>
+		  <div class="form-group">
+		    <label for="fl">Level</label>
+		    <select class="form-control" id="fl" name="level" [(ngModel)]= "data.level" #data="ngModel" >
+			  <option value="one">1</option>
+			  <option value="two">2</option>
+			  <option value="three">3</option>
+			  <option value="four">4</option>
+			</select>
+		  </div>
+		  <div class="form-group">
+		    <label for="fc">Contact</label>
+		    <input type="number" class="form-control" id="fc" name="contact" [(ngModel)]= "data.contact" #data="ngModel" placeholder="Student phone">
+		  </div>
+		  
+		  <div >
+		    <button type="button" class="btn btn-success" (click)="addStudent(data)">Create</button> &nbsp;
+		    <button type="button" class="btn btn-secondary">Cancel</button>
+		  </div>
+
+		</form>
+	  </div>
+	</div>
+</div>
